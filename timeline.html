@@ -42,8 +42,6 @@
     function renderTimeline() {
         const container = document.getElementById('timeline-container');
         const now = new Date();
-
-        // Find the most recent event that has already started
         let activeIndex = -1;
         for (let i = eventsData.length - 1; i >= 0; i--) {
             if (new Date(eventsData[i].date) <= now) {
@@ -51,7 +49,6 @@
                 break;
             }
         }
-        // Fallback if all events are in the future
         if (activeIndex === -1) activeIndex = 0;
 
         let htmlContent = '';
@@ -60,18 +57,13 @@
             const isCurrent = index === activeIndex;
             const isPast = index < activeIndex;
             const isFuture = index > activeIndex;
-
-            // Alternate positions: Even index -> Label Bottom / Odd index -> Label Top
             const isLabelBottom = index % 2 === 0;
-
-            // --- Positioning Classes ---
             const labelPosClass = isLabelBottom ? 'top-10' : 'bottom-10';
             const tooltipPosClass = isLabelBottom ? 'bottom-8' : 'top-8';
             const tooltipArrowClass = isLabelBottom
                 ? "after:top-full after:border-t-gray-800 translate-y-2 group-hover:translate-y-0"
                 : "after:bottom-full after:border-b-gray-800 -translate-y-2 group-hover:translate-y-0";
 
-            // --- Styling Classes based on State ---
             let dotHtml = '';
             let labelClasses = '';
 
@@ -88,7 +80,6 @@
                 labelClasses = isPast ? 'text-[#ffc600]' : 'text-white';
             }
 
-            // Construct the Node HTML
             htmlContent += `
                     <div class="relative w-0 h-0 flex items-center justify-center group cursor-pointer">
                         ${dotHtml}
@@ -109,11 +100,10 @@
         container.innerHTML = htmlContent;
     }
 
-    // Initial render
     renderTimeline();
 
-    // Optional: Re-check the time every 60 seconds to update automatically
     setInterval(renderTimeline, 60000);
 </script>
 </body>
+
 </html>
