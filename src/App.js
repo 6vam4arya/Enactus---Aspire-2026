@@ -5,6 +5,10 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import Schedule from './pages/Schedule';
+<<<<<<< HEAD
+=======
+import Gallery from './pages/Gallery';
+>>>>>>> a61a4ab (update)
 import './index.css';
 
 export default function App() {
@@ -17,6 +21,10 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
             <Route path="/schedule" element={<Schedule />} />
+<<<<<<< HEAD
+=======
+            <Route path="/gallery" element={<Gallery />} />
+>>>>>>> a61a4ab (update)
           </Routes>
         </main>
         <Footer />
