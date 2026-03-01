@@ -23,11 +23,10 @@ export default function Navbar() {
           <li>
             <Link
               to="/"
-              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${
-                isActive('/')
+              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${isActive('/')
                   ? 'bg-primary text-black'
                   : 'text-white hover:bg-black/30'
-              }`}
+                }`}
             >
               Home
             </Link>
@@ -35,11 +34,10 @@ export default function Navbar() {
           <li>
             <Link
               to="/events"
-              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${
-                isActive('/events')
+              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${isActive('/events')
                   ? 'bg-primary text-black'
                   : 'text-white hover:bg-black/30'
-              }`}
+                }`}
             >
               Events
             </Link>
@@ -47,22 +45,24 @@ export default function Navbar() {
           <li>
             <Link
               to="/schedule"
-              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${
-                isActive('/schedule')
+              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${isActive('/schedule')
                   ? 'bg-primary text-black'
                   : 'text-white hover:bg-black/30'
-              }`}
+                }`}
             >
               Schedule
             </Link>
           </li>
           <li>
-            <a
-              href="#gallery"
-              className=" text-lg text-white transition-all duration-300 rounded px-3 py-2 hover:bg-black/30"
+            <Link
+              to="/gallery"
+              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${isActive('/gallery')
+                  ? 'bg-primary text-black'
+                  : 'text-white hover:bg-black/30'
+                }`}
             >
               Gallery
-            </a>
+            </Link>
           </li>
           <li>
             <a
