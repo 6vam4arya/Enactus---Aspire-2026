@@ -23,18 +23,10 @@ export default function Navbar() {
           <li>
             <Link
               to="/"
-<<<<<<< HEAD
-              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${
-                isActive('/')
-                  ? 'bg-primary text-black'
-                  : 'text-white hover:bg-black/30'
-              }`}
-=======
               className={` text-lg transition-all duration-300 rounded px-3 py-2 ${isActive('/')
                   ? 'bg-primary text-black'
                   : 'text-white hover:bg-black/30'
                 }`}
->>>>>>> a61a4ab (update)
             >
               Home
             </Link>
@@ -42,18 +34,10 @@ export default function Navbar() {
           <li>
             <Link
               to="/events"
-<<<<<<< HEAD
-              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${
-                isActive('/events')
-                  ? 'bg-primary text-black'
-                  : 'text-white hover:bg-black/30'
-              }`}
-=======
               className={` text-lg transition-all duration-300 rounded px-3 py-2 ${isActive('/events')
                   ? 'bg-primary text-black'
                   : 'text-white hover:bg-black/30'
                 }`}
->>>>>>> a61a4ab (update)
             >
               Events
             </Link>
@@ -61,31 +45,15 @@ export default function Navbar() {
           <li>
             <Link
               to="/schedule"
-<<<<<<< HEAD
-              className={` text-lg transition-all duration-300 rounded px-3 py-2 ${
-                isActive('/schedule')
-                  ? 'bg-primary text-black'
-                  : 'text-white hover:bg-black/30'
-              }`}
-=======
               className={` text-lg transition-all duration-300 rounded px-3 py-2 ${isActive('/schedule')
                   ? 'bg-primary text-black'
                   : 'text-white hover:bg-black/30'
                 }`}
->>>>>>> a61a4ab (update)
             >
               Schedule
             </Link>
           </li>
           <li>
-<<<<<<< HEAD
-            <a
-              href="#gallery"
-              className=" text-lg text-white transition-all duration-300 rounded px-3 py-2 hover:bg-black/30"
-            >
-              Gallery
-            </a>
-=======
             <Link
               to="/gallery"
               className={` text-lg transition-all duration-300 rounded px-3 py-2 ${isActive('/gallery')
@@ -95,7 +63,6 @@ export default function Navbar() {
             >
               Gallery
             </Link>
->>>>>>> a61a4ab (update)
           </li>
           <li>
             <a
