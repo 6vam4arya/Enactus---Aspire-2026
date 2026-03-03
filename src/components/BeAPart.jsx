@@ -13,12 +13,16 @@ export default function BeAPart() {
       </h1>
       <div className="flex z-1">
         <div className="relative group">
-          <div className="absolute bg-[#FFD700] md:mt-[-10vh] md:group-hover:mt-[0vh] z-[1] flex items-center justify-center w-full transition-all duration-300 ">
+          <div className="absolute bg-[#FFD700] flex-1 md:mt-[-10vh] md:group-hover:mt-[0vh] z-[1] flex items-center justify-center w-full transition-all duration-300 ">
             <h2 className="text-[#212121] font-bold uppercase text-center text-4xl md:text-6xl">
               PARTICIPATE
             </h2>
           </div>
-          <img src="/Images/Participate.jpg" alt="" />
+          <img
+            src="/Images/Participate.png"
+            alt="participate"
+            className="object-cover h-full w-full"
+          />
           <div className="grid z-[1] mt-[-7vh] md:mt-[0]  md:group-hover:mt-[-10vh] absolute place-items-center mt w-full transition-all duration-300">
             <a
               href="https://linktr.ee/aspirensut"
@@ -32,12 +36,16 @@ export default function BeAPart() {
           </div>
         </div>
         <div className="relative group">
-          <div className="absolute bg-[#FFD700] md:mt-[-10vh] md:group-hover:mt-[0vh] z-[1] flex items-center justify-center w-full transition-all duration-300 ">
+          <div className="absolute bg-[#FFD700] flex-1 md:mt-[-10vh] md:group-hover:mt-[0vh] z-[1] flex items-center justify-center w-full transition-all duration-300 ">
             <h2 className="text-[#212121] font-bold uppercase text-center text-4xl md:text-6xl">
               STALLS
             </h2>
           </div>
-          <img src="/Images/Participate.jpg" alt="" />
+          <img
+            src="/Images/Stalls.png"
+            alt="stalls"
+            className="object-cover h-full w-full"
+          />
           <div className="grid z-[1] mt-[-7vh] md:mt-[0] md:group-hover:mt-[-10vh] absolute place-items-center mt w-full transition-all duration-300">
             <button className="bg-[#212121] text-[#FFD700] px-8 py-3 rounded-full font-bold uppercase tracking-wide hover:bg-[#1a1a1a]">
               REGISTER

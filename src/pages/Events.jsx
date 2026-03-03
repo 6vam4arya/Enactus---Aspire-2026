@@ -92,6 +92,17 @@ const eventData = {
       poc1: "Ryan: 9310342610",
       poc2: "Prakhyat: 9971226534",
     },
+    {
+      id: 9,
+      title: "Artist Showcase",
+      description:
+        "An exiciting showcase of enticing entertainment which you'll regret to miss. Its a secret, not one to dissapoint.",
+      location: "TBD",
+      timings: "TBD",
+      image: "/Images/Events/Artist.png",
+      poc1: "Ryan: 9310342610",
+      poc2: "Prakhyat: 9971226534",
+    },
   ],
 };
 

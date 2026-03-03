@@ -57,13 +57,13 @@ export default function Footer() {
               className="text-gray-300 mb-2"
               style={{ fontFamily: '"Gill Sans", sans-serif' }}
             >
-              Email: info@events.com
+              enactus@nsut.ac.in
             </p>
             <p
               className="text-gray-300"
               style={{ fontFamily: '"Gill Sans", sans-serif' }}
             >
-              Phone: (555) 123-4567
+              Phone: 9540994584, 7011994120
             </p>
           </div>
         </div>
