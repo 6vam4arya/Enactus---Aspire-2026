@@ -32,7 +32,7 @@ const eventData = {
       id: 3,
       title: "Fake Pitchathon",
       description:
-        "Participants must convince the judges that their ridiculous idea is the next billion-dollar unicorn. The event blends entrepreneurship parody with stand-up energy - sharp wit, straight-face delivery, and spontaneous humor are key.",
+        "Participants must convince the judges that their ridiculous idea is the next billion-dollar unicorn. The event blends entrepreneurship parody with stand-up energy - sharp wit, straight-face delivery, and spontaneous humor are key. NOTE: This event is open for Enactus society members only",
       location: "TBD",
       timings: "TBD",
       link: "https://unstop.com/competitions/fake-pitch-netaji-subhash-university-of-technology-main-campus-1650355?lb=TtgL5L9l&utm_medium=Share&utm_source=competitions&utm_campaign=Yashmgup72623",
