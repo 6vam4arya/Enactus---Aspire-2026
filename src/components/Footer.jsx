@@ -7,14 +7,13 @@ export default function Footer() {
     <footer className="bg-[#1a1a1a] text-white py-12 mt-0 z-[2]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* About Section */}
-          <div>
+          <Link to="https://enactus.in" target="_blank">
             <img
               src="/Images/EnactusLogo.png"
               className="w-[20vh] object-cover"
               alt="Enactus NSUT"
             />
-          </div>
+          </Link>
 
           {/* Quick Links */}
           <div>

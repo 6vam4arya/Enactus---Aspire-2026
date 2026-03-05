@@ -47,9 +47,15 @@ export default function BeAPart() {
             className="object-cover h-full w-full"
           />
           <div className="grid z-[1] mt-[-7vh] md:mt-[0] md:group-hover:mt-[-10vh] absolute place-items-center mt w-full transition-all duration-300">
-            <button className="bg-[#212121] text-[#FFD700] px-8 py-3 rounded-full font-bold uppercase tracking-wide hover:bg-[#1a1a1a]">
-              REGISTER
-            </button>
+            <a
+              href="https://www.instagram.com/p/DVSk5cNk5Zp/?igsh=MWNxZW12bW9yYnFpcw=="
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="bg-[#212121] text-[#FFD700] px-8 py-3 rounded-full font-bold uppercase tracking-wide hover:bg-[#1a1a1a]">
+                REGISTER
+              </button>
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const eventData = {
   "DAY 1": [
@@ -10,6 +11,7 @@ const eventData = {
         "Ideathon is a sustainability-focused innovation challenge where teams develop scalable, financially viable solutions aligned with the United Nations Sustainable Development Goals.",
       location: "TBD",
       timings: "TBD",
+      link: "https://unstop.com/competitions/greencap-ideathon-netaji-subhas-university-of-technology-nsut-delhi-1650717",
       image: "/Images/Events/B-plan.png",
       poc1: "Srishti: 92899527768",
       poc2: "Bhavishya: 9205404959",
@@ -22,6 +24,7 @@ const eventData = {
       location: "TBD",
       timings: "TBD",
       image: "/Images/Events/Strat.png",
+      link: "https://unstop.com/competitions/stratazenith-netaji-subhas-university-of-technology-nsut-delhi-1650314",
       poc1: "Tisha: 7428938139",
       poc2: "Nirvan: 9971767449",
     },
@@ -32,6 +35,7 @@ const eventData = {
         "Participants must convince the judges that their ridiculous idea is the next billion-dollar unicorn. The event blends entrepreneurship parody with stand-up energy - sharp wit, straight-face delivery, and spontaneous humor are key.",
       location: "TBD",
       timings: "TBD",
+      link: "https://unstop.com/competitions/fake-pitch-netaji-subhash-university-of-technology-main-campus-1650355?lb=TtgL5L9l&utm_medium=Share&utm_source=competitions&utm_campaign=Yashmgup72623",
       image: "/Images/Events/FakePitch.png",
       poc1: "Srishti: 92899527768",
       poc2: "Bhavishya: 9205404959",
@@ -42,6 +46,7 @@ const eventData = {
       description: "A 'normal' case competition with a unique 'twist'",
       location: "TBD",
       timings: "TBD",
+      link: "https://unstop.com/competitions/case-twist-netaji-subhas-university-of-technology-nsut-delhi-1651181",
       image: "/Images/Events/Case Twist.png",
       poc1: "Shashank: 9671647148",
       poc2: "Harehar: 9819969922",
@@ -56,6 +61,7 @@ const eventData = {
       location: "TBD",
       timings: "TBD",
       image: "/Images/Events/UXElix.png",
+      link: "https://unstop.com/competitions/uxelix-ux-crisis-reconstruction-challenge-netaji-subhas-university-of-technology-nsut-delhi-1650350",
       poc1: "Aryan: 9821195901",
       poc2: "Shreyansh: 9999355552",
     },
@@ -67,17 +73,19 @@ const eventData = {
       location: "TBD",
       timings: "TBD",
       image: "/Images/Events/V2V.png",
+      link: "https://unstop.com/competitions/v2v-vichaar-to-venture-netaji-subhas-university-of-technology-nsut-delhi-1650360",
       poc1: "Shashank: 9671647148",
       poc2: "Raghav: 9667420239",
     },
     {
       id: 7,
-      title: "B PLAN COMPETITION",
+      title: "B Plan Competition",
       description:
         "Teams will pariticpate in a head on head business planning competition",
       location: "TBD",
       timings: "TBD",
       image: "/Images/Events/B-plan.png",
+      link: "https://unstop.com/competitions/business-plan-competition-aspire26-netaji-subhas-university-of-technology-nsut-delhi-1650260",
       poc1: "Yatika: 7011443593",
       poc2: "Nishtha: 9711031008",
     },
@@ -89,6 +97,7 @@ const eventData = {
       location: "TBD",
       timings: "TBD",
       image: "/Images/Events/BridgeTheGap.png",
+      link: "https://unstop.com/competitions/bridge-the-gap-netaji-subhas-university-of-technology-nsut-delhi-1650675?lb=TtgL5L9l&utm_medium=Share&utm_source=yashmgup72623&utm_campaign=Competitions",
       poc1: "Ryan: 9310342610",
       poc2: "Prakhyat: 9971226534",
     },
@@ -100,6 +109,7 @@ const eventData = {
       location: "TBD",
       timings: "TBD",
       image: "/Images/Events/Artist.png",
+      link: " ",
       poc1: "Ryan: 9310342610",
       poc2: "Prakhyat: 9971226534",
     },
@@ -189,27 +199,28 @@ export default function Events() {
           <div className="max-w-6xl mx-auto ">
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
               {currentEvents.map((event) => (
-                <div
-                  className="mx-auto group bg-primary rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 flex flex-col w-full max-w-xl"
-                  id={event.id}
-                >
-                  <div className="relative rounded-2xl overflow-hidden w-full max-w-xl">
-                    <img
-                      src={event.image}
-                      alt={event.id}
-                      className="w-full h-80 object-cover transition-transform duration-700 ease-out md:group-hover:scale-105"
-                    />
+                <Link to={event.link} target="_blank">
+                  <div
+                    className="mx-auto group bg-primary rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 flex flex-col w-full max-w-xl"
+                    id={event.id}
+                  >
+                    <div className="relative rounded-2xl overflow-hidden w-full max-w-xl">
+                      <img
+                        src={event.image}
+                        alt={event.id}
+                        className="w-full h-80 object-cover transition-transform duration-700 ease-out md:group-hover:scale-105"
+                      />
 
-                    {/* Bottom panel */}
-                    <div className="absolute inset-x-0 bottom-0">
-                      <div className="bg-primary/90 p-4">
-                        <h3 className="mt-[1%] text-center text-2xl font-semibold text-black">
-                          {event.title}
-                        </h3>
+                      {/* Bottom panel */}
+                      <div className="absolute inset-x-0 bottom-0">
+                        <div className="bg-primary/90 p-4">
+                          <h3 className="mt-[1%] text-center text-2xl font-semibold text-black">
+                            {event.title}
+                          </h3>
 
-                        {/* DEFAULT expanded on <md, collapsed on md+, hover expands on md+ */}
-                        <div
-                          className="
+                          {/* DEFAULT expanded on <md, collapsed on md+, hover expands on md+ */}
+                          <div
+                            className="
             mt-2 text-sm text-gray-800 px-4
             max-h-80 opacity-100 translate-y-0 overflow-hidden
             transition-[max-height,opacity,transform] duration-700 ease-out
@@ -217,29 +228,32 @@ export default function Events() {
             md:max-h-0 md:opacity-0 md:translate-y-1
             md:group-hover:max-h-80 md:group-hover:opacity-100 md:group-hover:translate-y-0
           "
-                          style={{ fontFamily: '"Gill Sans", sans-serif' }}
-                        >
-                          <div>{event.description}</div>
-
-                          <div
-                            className="font-bold pt-4 text-lg"
-                            style={{ fontFamily: '"Bebas Neue", sans-serif' }}
+                            style={{ fontFamily: '"Gill Sans", sans-serif' }}
                           >
-                            Location:{" "}
-                            <span className="font-bold">{event.location}</span>
+                            <div>{event.description}</div>
+
+                            <div
+                              className="font-bold pt-4 text-lg"
+                              style={{ fontFamily: '"Bebas Neue", sans-serif' }}
+                            >
+                              Location:{" "}
+                              <span className="font-bold">
+                                {event.location}
+                              </span>
+                              <br />
+                              Time:{" "}
+                              <span className="font-bold">{event.timings}</span>
+                            </div>
                             <br />
-                            Time:{" "}
-                            <span className="font-bold">{event.timings}</span>
+                            {event.poc1}
+                            <br />
+                            {event.poc2}
                           </div>
-                          <br />
-                          {event.poc1}
-                          <br />
-                          {event.poc2}
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

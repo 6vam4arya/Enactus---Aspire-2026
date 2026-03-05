@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { HashLink } from "react-router-hash-link";
 
 export default function Timeline() {
   const [events, setEvents] = useState([
@@ -34,7 +33,7 @@ export default function Timeline() {
     {
       id: 5,
       title: "UXElix",
-      date: "2026-03-20T12:00:00",
+      date: "2026-03-05T12:00:00",
       tooltipTitle: "Loc 5",
       desc: "Ready to solve a brand crisis from the inside out?",
     },
@@ -61,10 +60,6 @@ export default function Timeline() {
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedIndex, setSelectedIndex] = useState(null);
-  const handleEventClick = (index) => {
-    setSelectedIndex(index);
-  };
 
   useEffect(() => {
     const now = new Date();
@@ -111,10 +106,7 @@ export default function Timeline() {
 
         <div className="flex justify-between w-full relative z-10">
           {events.map((event, index) => {
-            const isClicked = selectedIndex === index;
-            const isCurrent = index === activeIndex;
-            const isPast = index < activeIndex;
-            const isYellow = index >= 3; // Events 4, 5, 6, 7, 8 (indices 3, 4, 5, 6, 7)
+            const isPast = index < activeIndex; // Events 4, 5, 6, 7, 8 (indices 3, 4, 5, 6, 7)
             const isLabelBottom = index % 2 === 0;
             const labelPosClass = isLabelBottom ? "top-10" : "bottom-10";
             const tooltipPosClass = isLabelBottom ? "bottom-8" : "top-8";
@@ -125,8 +117,7 @@ export default function Timeline() {
             return (
               <button
                 key={event.id}
-                onClick={() => handleEventClick(index)}
-                className="relative w-0 h-0 flex items-center justify-center group cursor-pointer bg-transparent border-none p-0"
+                className="transition-all duration-500 relative w-0 h-0 flex items-center justify-center group cursor-pointer bg-transparent border-none p-0"
                 style={{ outline: "none" }}
               >
                 {/* Dot */}
@@ -179,10 +170,8 @@ export default function Timeline() {
                     {event.desc}
                   </p>
                   <p className="text-[10px] text-gray-500 mt-2">
-                    {new Date(event.date).toLocaleDateString()}
-                  </p>
-                  <p className="text-[10px] text-gray-400 mt-1">
-                    Click to select
+                    {/*new Date(event.date).toLocaleDateString()*/}
+                    TBD
                   </p>
                 </div>
               </button>
