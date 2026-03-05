@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function Timeline() {
-  const [events, setEvents] = useState([
+  const [events] = useState([
     {
       id: 1,
       title: "Ideathon",
@@ -59,29 +59,34 @@ export default function Timeline() {
       desc: "An electric night to remember",
     },
   ]);
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const now = new Date();
     let newActiveIndex = -1;
+
     for (let i = events.length - 1; i >= 0; i--) {
       if (new Date(events[i].date) <= now) {
         newActiveIndex = i;
         break;
       }
     }
+
     if (newActiveIndex === -1) newActiveIndex = 0;
     setActiveIndex(newActiveIndex);
 
     const interval = setInterval(() => {
       const updatedNow = new Date();
       let updatedIndex = -1;
+
       for (let i = events.length - 1; i >= 0; i--) {
         if (new Date(events[i].date) <= updatedNow) {
           updatedIndex = i;
           break;
         }
       }
+
       if (updatedIndex === -1) updatedIndex = 0;
       setActiveIndex(updatedIndex);
     }, 60000);
@@ -106,7 +111,7 @@ export default function Timeline() {
 
         <div className="flex justify-between w-full relative z-10">
           {events.map((event, index) => {
-            const isPast = index < activeIndex; // Events 4, 5, 6, 7, 8 (indices 3, 4, 5, 6, 7)
+            const isPast = index < activeIndex;
             const isLabelBottom = index % 2 === 0;
             const labelPosClass = isLabelBottom ? "top-10" : "bottom-10";
             const tooltipPosClass = isLabelBottom ? "bottom-8" : "top-8";
@@ -120,7 +125,6 @@ export default function Timeline() {
                 className="transition-all duration-500 relative w-0 h-0 flex items-center justify-center group cursor-pointer bg-transparent border-none p-0"
                 style={{ outline: "none" }}
               >
-                {/* Dot */}
                 {index === activeIndex ? (
                   <div className="w-10 h-10 border-[4px] border-[#ffc600] bg-[#1a1a1a] rounded-full absolute z-10 flex items-center justify-center shadow-[0_0_20px_rgba(255,198,0,0.6)] transition-all duration-300">
                     <svg
@@ -136,14 +140,13 @@ export default function Timeline() {
                   ></div>
                 )}
 
-                {/* Label */}
                 <div
                   className={`absolute ${labelPosClass} whitespace-nowrap font-bold uppercase tracking-wide transition-all duration-300 text-2xl ${
                     index === activeIndex
                       ? "bg-[#FFB700] text-black px-3 md:px-6 py-1 md:py-2 rounded-lg scale-110 shadow-lg"
                       : isPast
-                        ? "text-[#FFD700] hover:scale-105"
-                        : "text-white hover:scale-105"
+                      ? "text-[#FFD700] hover:scale-105"
+                      : "text-white hover:scale-105"
                   }`}
                   style={{
                     fontFamily: '"Bebas Neue", sans-serif',
@@ -153,7 +156,6 @@ export default function Timeline() {
                   {event.title}
                 </div>
 
-                {/* Tooltip */}
                 <div
                   className={`absolute ${tooltipPosClass} opacity-0 group-hover:opacity-100 transition-all duration-300 w-28 md:w-48 bg-gray-800 text-white rounded-lg p-2 md:p-4 shadow-xl z-50 pointer-events-none text-center border border-gray-700 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:border-[6px] after:border-transparent ${tooltipArrowClass}`}
                 >
@@ -166,11 +168,12 @@ export default function Timeline() {
                   >
                     {event.tooltipTitle}
                   </p>
+
                   <p className="text-xs text-gray-300 leading-relaxed">
                     {event.desc}
                   </p>
+
                   <p className="text-[10px] text-gray-500 mt-2">
-                    {/*new Date(event.date).toLocaleDateString()*/}
                     TBD
                   </p>
                 </div>
