@@ -1,65 +1,67 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 export default function Timeline() {
-  const [events] = useState([
-    {
-      id: 1,
-      title: "Ideathon",
-      date: "2026-03-19T12:00:00",
-      tooltipTitle: "Loc 1",
-      desc: "Pitch if you dare",
-    },
-    {
-      id: 2,
-      title: "Stratazenith",
-      date: "2026-03-19T14:00:00",
-      tooltipTitle: "Loc 2",
-      desc: "Gauntlet of challenging events",
-    },
-    {
-      id: 3,
-      title: "Fake Pitchathon",
-      date: "2026-03-19T16:00:00",
-      tooltipTitle: "Loc 3",
-      desc: "A satirical idea-presentation competition.",
-    },
-    {
-      id: 4,
-      title: "Case Twist",
-      date: "2026-03-20T18:00:00",
-      tooltipTitle: "Loc 4",
-      desc: "A completely 'normal' case competition",
-    },
-    {
-      id: 5,
-      title: "UXElix",
-      date: "2026-03-05T12:00:00",
-      tooltipTitle: "Loc 5",
-      desc: "Ready to solve a brand crisis from the inside out?",
-    },
-    {
-      id: 6,
-      title: "Vichaar to Venture",
-      date: "2026-03-20T14:00:00",
-      tooltipTitle: "Loc 6",
-      desc: "Small ideas, big impact",
-    },
-    {
-      id: 7,
-      title: "B PLAN COMPETITION",
-      date: "2026-03-20T16:00:00",
-      tooltipTitle: "Loc 7",
-      desc: "Pitch your business",
-    },
-    {
-      id: 8,
-      title: "Bridge The Gap",
-      date: "2026-03-20T18:00:00",
-      tooltipTitle: "Loc 8",
-      desc: "An electric night to remember",
-    },
-  ]);
-
+  const events = useMemo(
+    () => [
+      {
+        id: 1,
+        title: "Ideathon",
+        date: "2026-03-19T12:00:00",
+        tooltipTitle: "Loc 1",
+        desc: "Pitch if you dare",
+      },
+      {
+        id: 2,
+        title: "Stratazenith",
+        date: "2026-03-19T14:00:00",
+        tooltipTitle: "Loc 2",
+        desc: "Gauntlet of challenging events",
+      },
+      {
+        id: 3,
+        title: "Fake Pitchathon",
+        date: "2026-03-19T16:00:00",
+        tooltipTitle: "Loc 3",
+        desc: "A satirical idea-presentation competition.",
+      },
+      {
+        id: 4,
+        title: "Case Twist",
+        date: "2026-03-20T18:00:00",
+        tooltipTitle: "Loc 4",
+        desc: "A completely 'normal' case competition",
+      },
+      {
+        id: 5,
+        title: "UXElix",
+        date: "2026-03-20T12:00:00",
+        tooltipTitle: "Loc 5",
+        desc: "Ready to solve a brand crisis from the inside out?",
+      },
+      {
+        id: 6,
+        title: "Vichaar to Venture",
+        date: "2026-03-20T14:00:00",
+        tooltipTitle: "Loc 6",
+        desc: "Small ideas, big impact",
+      },
+      {
+        id: 7,
+        title: "B PLAN COMPETITION",
+        date: "2026-03-20T16:00:00",
+        tooltipTitle: "Loc 7",
+        desc: "Pitch your business",
+      },
+      {
+        id: 8,
+        title: "Bridge The Gap",
+        date: "2026-03-20T18:00:00",
+        tooltipTitle: "Loc 8",
+        desc: "An electric night to remember",
+      },
+    ],
+    [],
+  );
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -145,8 +147,8 @@ export default function Timeline() {
                     index === activeIndex
                       ? "bg-[#FFB700] text-black px-3 md:px-6 py-1 md:py-2 rounded-lg scale-110 shadow-lg"
                       : isPast
-                      ? "text-[#FFD700] hover:scale-105"
-                      : "text-white hover:scale-105"
+                        ? "text-[#FFD700] hover:scale-105"
+                        : "text-white hover:scale-105"
                   }`}
                   style={{
                     fontFamily: '"Bebas Neue", sans-serif',
@@ -173,9 +175,7 @@ export default function Timeline() {
                     {event.desc}
                   </p>
 
-                  <p className="text-[10px] text-gray-500 mt-2">
-                    TBD
-                  </p>
+                  <p className="text-[10px] text-gray-500 mt-2">TBD</p>
                 </div>
               </button>
             );
