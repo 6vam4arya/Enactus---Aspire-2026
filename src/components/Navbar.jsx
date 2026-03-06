@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 export default function Navbar() {
+  const [mediumScreen, setMediumScreen] = useState(false);
+  const [smallScreen, setSmallScreen] = useState(false);
   const location = useLocation();
-
+  useEffect(() => {
+    const resize = () => {
+      setMediumScreen(window.innerWidth <= 768);
+      setSmallScreen(window.innerWidth <= 383);
+    };
+    window.addEventListener("resize", resize);
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -13,9 +24,13 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src={`${process.env.PUBLIC_URL}/Images/HeadingEvents.png`}
+            src={
+              mediumScreen
+                ? `${process.env.PUBLIC_URL}/Images/HeadingEvents2.png`
+                : `${process.env.PUBLIC_URL}/Images/HeadingEvents.png`
+            }
             alt="Logo"
-            className="h-10 md:h-12 w-auto rounded"
+            className="h-full object-cover h-12 w-auto rounded"
           />
         </div>
 
@@ -24,7 +39,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/"
-              className={` text-md md:text-lg transition-all duration-300 rounded px-3 py-2 ${
+              className={` text-sm md:text-lg transition-all duration-300 rounded px-3 py-2 ${
                 isActive("/")
                   ? "bg-primary text-black"
                   : "text-white hover:bg-black/30"
@@ -36,7 +51,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/events"
-              className={` text-md md:text-lg transition-all duration-300 rounded px-3 py-2 ${
+              className={` text-sm md:text-lg transition-all duration-300 rounded px-3 py-2 ${
                 isActive("/events")
                   ? "bg-primary text-black"
                   : "text-white hover:bg-black/30"
@@ -45,27 +60,35 @@ export default function Navbar() {
               Events
             </Link>
           </li>
-          <li>
-            <HashLink
-              to="/#timeline"
-              className="text-md md:text-lg transition-all duration-300 text-white hover:bg-black/30 rounded px-3 py-2"
-              smooth
-            >
-              Schedule
-            </HashLink>
-          </li>
-          <li>
-            <HashLink
-              to={(isActive("/events") ? "/events" : "/") + "#contact"}
-              className=" text-md md:text-lg text-white transition-all duration-300 rounded px-3 py-2 hover:bg-black/30"
-              smooth
-            >
-              Contact
-            </HashLink>
-          </li>
+          {smallScreen ? (
+            <></>
+          ) : (
+            <li>
+              <HashLink
+                to="/#timeline"
+                className="text-sm md:text-lg transition-all duration-300 text-white hover:bg-black/30 rounded px-3 py-2"
+                smooth
+              >
+                Schedule
+              </HashLink>
+            </li>
+          )}
+          {smallScreen ? (
+            <></>
+          ) : (
+            <li>
+              <HashLink
+                to={(isActive("/events") ? "/events" : "/") + "#contact"}
+                className=" text-sm md:text-lg text-white transition-all duration-300 rounded px-3 py-2 hover:bg-black/30"
+                smooth
+              >
+                Contact
+              </HashLink>
+            </li>
+          )}
           <li>
             <HashLink to="/#register">
-              <button className="bg-primary text-black  px-6 py-2 rounded transition-opacity duration-300 hover:opacity-85">
+              <button className="bg-primary text-black text-sm md:text-md px-3 py-[6px] rounded transition-opacity duration-300 hover:opacity-85">
                 Register
               </button>
             </HashLink>

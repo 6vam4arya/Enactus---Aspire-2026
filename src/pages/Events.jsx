@@ -230,7 +230,9 @@ export default function Events() {
           "
                             style={{ fontFamily: '"Gill Sans", sans-serif' }}
                           >
-                            <div>{event.description}</div>
+                            <div className="text-xs sm:text-md">
+                              {event.description}
+                            </div>
 
                             <div
                               className="font-bold pt-4 text-lg"
