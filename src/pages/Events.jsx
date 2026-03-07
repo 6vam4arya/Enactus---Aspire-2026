@@ -22,7 +22,7 @@ const eventData = {
       description:
         "This event is designed to test participants’ ability to think strategically under uncertainty. Blending concepts from economics, market simulations, and applied game theory,",
       location: "TBD",
-      timings: "TBD",
+      timings: "1:00PM-4:00PM",
       image: "/Images/Events/Strat.png",
       link: "https://unstop.com/competitions/stratazenith-netaji-subhas-university-of-technology-nsut-delhi-1650314",
       poc1: "Ryan: 9310342610",
@@ -42,7 +42,7 @@ const eventData = {
     },
     {
       id: 4,
-      title: "CASE COMP",
+      title: "CASE TWIST",
       description: "A 'normal' case competition with a unique 'twist'",
       location: "TBD",
       timings: "12:00-5:00",
@@ -51,10 +51,22 @@ const eventData = {
       poc1: "Aryan: 9821195901",
       poc2: "Shreyansh: 9999355552",
     },
+    {
+      id: 5,
+      title: "MUSICAL PERFORMANCE",
+      description:
+        "An exciting musical showcase by the talented musicians of NSUT. A perfect blend of melodies and rhythms to set the tone for an unforgettable evening.",
+      location: "TBD",
+      timings: "4:00-6:00",
+      link: "",
+      image: "/Images/Events/MusicPerformance.png",
+      poc1: "",
+      poc2: "",
+    },
   ],
   "DAY 2": [
     {
-      id: 5,
+      id: 6,
       title: "UXELIX",
       description:
         "Dive into real-world case studies to identify the UX failures, from dark patterns to inaccessible interfaces that amplify a crisis, and pitch a comprehensive redesign solution.",
@@ -66,7 +78,7 @@ const eventData = {
       poc2: "Nirvan: 9971767449",
     },
     {
-      id: 6,
+      id: 7,
       title: "VICHAAR TO VENTURE",
       description:
         "V2V is a high-intensity Venture Capital Simulation competition where teams act as investment firms managing a sustainability-focused fund under real-world market uncertainty",
@@ -78,7 +90,7 @@ const eventData = {
       poc2: "Bhavishya: 9205404959",
     },
     {
-      id: 7,
+      id: 8,
       title: "B-PLAN COMP",
       description:
         "Teams will pariticpate in a head on head business planning competition",
@@ -90,7 +102,7 @@ const eventData = {
       poc2: "Harehar: 9819969922",
     },
     {
-      id: 8,
+      id: 9,
       title: "BRIDGE THE GAP",
       description:
         "The competition invites participants to apply fundamental engineering principles to design and construct a free-standing structure using limited, predefined materials that can support maximum load while maintaining stability for a fixed duration.",
@@ -102,7 +114,7 @@ const eventData = {
       poc2: "Nishtha: 9711031008",
     },
     {
-      id: 9,
+      id: 10,
       title: "Artist Showcase",
       description:
         "An exiciting showcase of enticing entertainment which you'll regret to miss. Its a secret, not one to dissapoint.",

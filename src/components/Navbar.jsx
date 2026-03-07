@@ -30,7 +30,7 @@ export default function Navbar() {
                 : `${process.env.PUBLIC_URL}/Images/HeadingEvents.png`
             }
             alt="Logo"
-            className="h-full object-cover h-12 w-auto rounded"
+            className=" object-cover h-12 w-auto rounded"
           />
         </div>
 
