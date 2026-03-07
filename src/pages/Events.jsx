@@ -6,7 +6,7 @@ const eventData = {
   "DAY 1": [
     {
       id: 1,
-      title: "Ideathon",
+      title: "IDEATHON",
       description:
         "Ideathon is a sustainability-focused innovation challenge where teams develop scalable, financially viable solutions aligned with the United Nations Sustainable Development Goals.",
       location: "TBD",
@@ -30,7 +30,7 @@ const eventData = {
     },
     {
       id: 3,
-      title: "Fake Pitch",
+      title: "FAKE PITCH",
       description:
         "Participants must convince the judges that their ridiculous idea is the next billion-dollar unicorn. The event blends entrepreneurship parody with stand-up energy - sharp wit, straight-face delivery, and spontaneous humor are key. NOTE: This event is open for Enactus society members only",
       location: "TBD",
@@ -42,7 +42,7 @@ const eventData = {
     },
     {
       id: 4,
-      title: "Case Comp",
+      title: "CASE COMP",
       description: "A 'normal' case competition with a unique 'twist'",
       location: "TBD",
       timings: "12:00-5:00",
@@ -55,7 +55,7 @@ const eventData = {
   "DAY 2": [
     {
       id: 5,
-      title: "Intaglios Uxelix",
+      title: "UXELIX",
       description:
         "Dive into real-world case studies to identify the UX failures, from dark patterns to inaccessible interfaces that amplify a crisis, and pitch a comprehensive redesign solution.",
       location: "TBD",
@@ -67,7 +67,7 @@ const eventData = {
     },
     {
       id: 6,
-      title: "Execomm V2V",
+      title: "VICHAAR TO VENTURE",
       description:
         "V2V is a high-intensity Venture Capital Simulation competition where teams act as investment firms managing a sustainability-focused fund under real-world market uncertainty",
       location: "TBD",
@@ -79,7 +79,7 @@ const eventData = {
     },
     {
       id: 7,
-      title: "B-Plan Comp",
+      title: "B-PLAN COMP",
       description:
         "Teams will pariticpate in a head on head business planning competition",
       location: "TBD",
@@ -91,7 +91,7 @@ const eventData = {
     },
     {
       id: 8,
-      title: "ASME Bridge The Gap",
+      title: "BRIDGE THE GAP",
       description:
         "The competition invites participants to apply fundamental engineering principles to design and construct a free-standing structure using limited, predefined materials that can support maximum load while maintaining stability for a fixed duration.",
       location: "TBD",
