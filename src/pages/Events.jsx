@@ -10,7 +10,7 @@ const eventData = {
       description:
         "Ideathon is a sustainability-focused innovation challenge where teams develop scalable, financially viable solutions aligned with the United Nations Sustainable Development Goals.",
       location: "TBD",
-      timings: "TBD",
+      timings: "12:00-5:00",
       link: "https://unstop.com/competitions/greencap-ideathon-netaji-subhas-university-of-technology-nsut-delhi-1650717",
       image: "/Images/Events/B-plan.png",
       poc1: "Srishti: 92899527768",
@@ -30,11 +30,11 @@ const eventData = {
     },
     {
       id: 3,
-      title: "Fake Pitchathon",
+      title: "Fake Pitch",
       description:
         "Participants must convince the judges that their ridiculous idea is the next billion-dollar unicorn. The event blends entrepreneurship parody with stand-up energy - sharp wit, straight-face delivery, and spontaneous humor are key. NOTE: This event is open for Enactus society members only",
       location: "TBD",
-      timings: "TBD",
+      timings: "2:00-6:00",
       link: "https://unstop.com/competitions/fake-pitch-netaji-subhash-university-of-technology-main-campus-1650355?lb=TtgL5L9l&utm_medium=Share&utm_source=competitions&utm_campaign=Yashmgup72623",
       image: "/Images/Events/FakePitch.png",
       poc1: "Srishti: 92899527768",
@@ -42,10 +42,10 @@ const eventData = {
     },
     {
       id: 4,
-      title: "Case Twist",
+      title: "Case Comp",
       description: "A 'normal' case competition with a unique 'twist'",
       location: "TBD",
-      timings: "TBD",
+      timings: "12:00-5:00",
       link: "https://unstop.com/competitions/case-twist-netaji-subhas-university-of-technology-nsut-delhi-1651181",
       image: "/Images/Events/Case Twist.png",
       poc1: "Shashank: 9671647148",
@@ -55,11 +55,11 @@ const eventData = {
   "DAY 2": [
     {
       id: 5,
-      title: "UXElix",
+      title: "Intaglios Uxelix",
       description:
         "Dive into real-world case studies to identify the UX failures, from dark patterns to inaccessible interfaces that amplify a crisis, and pitch a comprehensive redesign solution.",
       location: "TBD",
-      timings: "TBD",
+      timings: "12:00-6:00",
       image: "/Images/Events/UXElix.png",
       link: "https://unstop.com/competitions/uxelix-ux-crisis-reconstruction-challenge-netaji-subhas-university-of-technology-nsut-delhi-1650350",
       poc1: "Aryan: 9821195901",
@@ -67,11 +67,11 @@ const eventData = {
     },
     {
       id: 6,
-      title: "Vichaar to Venture",
+      title: "Execomm V2V",
       description:
         "V2V is a high-intensity Venture Capital Simulation competition where teams act as investment firms managing a sustainability-focused fund under real-world market uncertainty",
       location: "TBD",
-      timings: "TBD",
+      timings: "2:00-5:00",
       image: "/Images/Events/V2V.png",
       link: "https://unstop.com/competitions/v2v-vichaar-to-venture-netaji-subhas-university-of-technology-nsut-delhi-1650360",
       poc1: "Shashank: 9671647148",
@@ -79,11 +79,11 @@ const eventData = {
     },
     {
       id: 7,
-      title: "B Plan Competition",
+      title: "B-Plan Comp",
       description:
         "Teams will pariticpate in a head on head business planning competition",
       location: "TBD",
-      timings: "TBD",
+      timings: "12:00-5:00",
       image: "/Images/Events/B-plan.png",
       link: "https://unstop.com/competitions/business-plan-competition-aspire26-netaji-subhas-university-of-technology-nsut-delhi-1650260",
       poc1: "Yatika: 7011443593",
@@ -91,11 +91,11 @@ const eventData = {
     },
     {
       id: 8,
-      title: "Bridge The Gap",
+      title: "ASME Bridge The Gap",
       description:
         "The competition invites participants to apply fundamental engineering principles to design and construct a free-standing structure using limited, predefined materials that can support maximum load while maintaining stability for a fixed duration.",
       location: "TBD",
-      timings: "TBD",
+      timings: "2:00-6:00",
       image: "/Images/Events/BridgeTheGap.png",
       link: "https://unstop.com/competitions/bridge-the-gap-netaji-subhas-university-of-technology-nsut-delhi-1650675?lb=TtgL5L9l&utm_medium=Share&utm_source=yashmgup72623&utm_campaign=Competitions",
       poc1: "Ryan: 9310342610",
