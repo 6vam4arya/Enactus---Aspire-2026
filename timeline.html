@@ -37,15 +37,15 @@
 
 <script>
     const eventsData = [
-        { title: 'Opening Ceremony', desc: 'Kick off the convention with inspiring keynotes and the official launch of Aspire.', time: '11:00 AM - 12:30 PM', day: 'Day 1', date: '2026-03-07T11:00:00' },
-        { title: 'Ideathon', desc: 'Develop scalable, financially viable solutions aligned with the UN Sustainable Development Goals.', time: '12:00 PM - 05:00 PM', day: 'Day 1', date: '2026-03-07T12:00:00' },
-        { title: 'Case Comp', desc: 'A classic business case study competition with sudden, unpredictable and unique twists.', time: '12:00 PM - 05:00 PM', day: 'Day 1', date: '2026-03-07T12:05:00' },
-        { title: 'Fake Pitchathon', desc: 'Pitch a ridiculous idea as the next unicorn! Blends entrepreneurship parody with stand-up energy. (Note: Enactus members only)', time: '02:00 PM - 06:00 PM', day: 'Day 1', date: '2026-03-07T14:00:00' },
-        { title: 'Uxelix', desc: 'Identify UX failures amplifying crises and pitch comprehensive redesign solutions for real-world case studies.', time: '12:00 PM - 06:00 PM', day: 'Day 2', date: '2026-03-08T12:00:00' },
-        { title: 'B Plan Comp', desc: 'Go head-to-head with competing teams in a rigorous business planning competition.', time: '12:00 PM - 05:00 PM', day: 'Day 2', date: '2026-03-08T12:05:00' },
-        { title: 'Vichaar To Venture', desc: 'A high-intensity VC simulation managing a sustainability-focused fund under real-world market uncertainty.', time: '02:00 PM - 05:00 PM', day: 'Day 2', date: '2026-03-08T14:00:00' },
-        { title: 'Bridge The Gap', desc: 'Apply engineering principles to design and construct a free-standing structure using limited materials to support maximum load.', time: '02:00 PM - 06:00 PM', day: 'Day 2', date: '2026-03-08T14:05:00' },
-        { title: 'Closing Ceremony', desc: 'Wrap up the fest with the final results, awards, and an engaging speaker session.', time: '06:00 PM Onwards', day: 'Day 2', date: '2026-03-08T18:00:00' }
+        { title: 'Opening Ceremony', desc: 'Inspiring keynotes and launch.', time: '11:00 AM - 12:30 PM', day: 'Day 1', date: '2026-03-07T11:00:00' },
+        { title: 'Ideathon', desc: 'Develop sustainable scalable solutions.', time: '12:00 PM - 05:00 PM', day: 'Day 1', date: '2026-03-07T12:00:00' },
+        { title: 'Case Comp', desc: 'Business case with twists.', time: '12:00 PM - 05:00 PM', day: 'Day 1', date: '2026-03-07T12:05:00' },
+        { title: 'Fake Pitchathon', desc: 'Parody entrepreneurship pitch competition.', time: '02:00 PM - 06:00 PM', day: 'Day 1', date: '2026-03-07T14:00:00' },
+        { title: 'Uxelix', desc: 'Fix real-world UX failures.', time: '12:00 PM - 06:00 PM', day: 'Day 2', date: '2026-03-08T12:00:00' },
+        { title: 'B Plan Comp', desc: 'Rigorous business plan competition.', time: '12:00 PM - 05:00 PM', day: 'Day 2', date: '2026-03-08T12:05:00' },
+        { title: 'Vichaar To Venture', desc: 'High-intensity VC simulation.', time: '02:00 PM - 05:00 PM', day: 'Day 2', date: '2026-03-08T14:00:00' },
+        { title: 'Bridge The Gap', desc: 'Build load-bearing structures.', time: '02:00 PM - 06:00 PM', day: 'Day 2', date: '2026-03-08T14:05:00' },
+        { title: 'Closing Ceremony', desc: 'Awards and speaker session.', time: '06:00 PM Onwards', day: 'Day 2', date: '2026-03-08T18:00:00' }
     ];
 
     function renderTimeline() {
@@ -101,11 +101,9 @@
                         ${dotHtml}
                         ${labelHtml}
 
-                        <div class="absolute ${tooltipYClass} left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 w-64 bg-gray-800 text-white rounded-lg p-4 shadow-xl z-[100] pointer-events-none text-center border border-gray-700 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:border-[6px] after:border-transparent ${tooltipArrowClass}">
-                            <p class="font-bold text-[#ffb703] mb-1 font-oswald text-lg tracking-wide">${event.title}</p>
-                            <p class="text-sm text-gray-300 font-semibold border-b border-gray-600 pb-2 mb-2">${event.day}</p>
-                            <p class="text-xs text-gray-300 leading-relaxed mb-1">${event.desc}</p>
-                            <p class="text-xs text-[#ffb703] font-bold mt-2">${event.time}</p>
+                        <div class="absolute ${tooltipYClass} left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 w-52 bg-gray-800 text-white rounded-lg p-3 shadow-xl z-[100] pointer-events-none text-center border border-gray-700 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:border-[6px] after:border-transparent ${tooltipArrowClass}">
+                            <p class="text-xs text-[#ffb703] font-bold border-b border-gray-600 pb-1.5 mb-1.5 tracking-wider uppercase">${event.day} &bull; ${event.time}</p>
+                            <p class="text-xs text-gray-300 leading-relaxed">${event.desc}</p>
                         </div>
                     </div>
                 `;
